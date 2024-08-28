@@ -1,35 +1,32 @@
 import React, { useState } from 'react'
-
-
-
-
-
-
-
-
-
+import { BsCardHeading } from "react-icons/bs"
+import { MdCategory } from "react-icons/md";
+import { FaLink } from "react-icons/fa6";
+import { SiNotepadplusplus } from "react-icons/si";
 
 const PersonalGrowth = () => {
-const [list, setList] = useState([])
-const [heading, setHeading] = useState('')
-const [categories, setCategories] = useState('')
-const [link, setLink] = useState('')
-const [text, setText] = useState('')
- 
+    const [list, setList] = useState([])
+    const [heading, setHeading] = useState('')
+    const [categories, setCategories] = useState('')
+    const [link, setLink] = useState('')
+    const [text, setText] = useState('')
 
-const saveList = () =>{
-    if (heading.trim()) {
-        setList([...list, heading])
-        setHeading('')
+
+
+
+    const saveList = () => {
+        if (heading.trim()) {
+            setList([...list, heading])
+            setHeading('')
+        }
     }
-}
 
 
 
 
 
     return (
-        <div>
+        <div  >
             <header className="PersonalHeader">
                 <div>
                     <h1> Personal Growth & Well-being</h1>
@@ -37,52 +34,78 @@ const saveList = () =>{
                 </div>
             </header>
 
-            <label htmlFor="">Heading</label>
-            <input type="text" value={heading}  onChange={e=>setHeading(e.target.value)} />
+            <div className='personal-container'>
+            <div className='input-container'>
+            <label htmlFor=""><BsCardHeading />   </label>
+            <input className= 'innerInput' type="text" placeholder='Heading' value={heading} onChange={e => setHeading(e.target.value)} /> <br />
 
-            <label htmlFor="">Categories</label>
-            <input type="text" />
+            <label htmlFor=""><MdCategory /> </label>
+            <input className='innerInput'  type="text" placeholder='category' /> <br />
 
-            <label htmlFor="">Your homepage link</label>
-            <input type="url" /><br />
+            <label htmlFor=""><FaLink /></label>
+            <input className='innerInput' placeholder='https://.... Link' type="url" /><br />
+            <button className='personalButton' onClick={saveList}>Save</button>
+            </div>
 
-            <label htmlFor="">Text Area</label>
-            <textarea name="" id=""></textarea>
+            <div>
+                <div >
+            <label htmlFor=""><SiNotepadplusplus /></label>
+            <input 
+            className='notepadInput' 
+            placeholder='Title'
+            type="text"
+             />
+             
+            </div>
+            <textarea placeholder='Write down quick notes' name="" id=""></textarea>
+            </div>
+            
+            </div>
 
-            <button onClick={saveList}>Save</button>
-
-
-
-            <table width="100%" border="1">
-        <thead>
-            <tr>
-               <th>Heading</th>
-               <th>Category</th>
-               <th>Notes</th>
-               <th>Links</th>
-               <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            {list.map((item, idx) => ( 
-            <td key={idx}>{item}</td>))}
-            <td></td>
-
-            <td> </td>
-            <td></td>
-            <td> 
-                <button>edit</button>
-                <button>delete</button>
-
-                 </td>
-        </tbody>
-</table>
-
-
-
-
+           
 
             
+
+
+
+            <table width="50%" border="1">
+                <thead>
+                    <tr>
+                        <th>Heading</th>
+                        <th>Category</th>
+                        <th>Links</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+                    {list.map((item, idx) => (
+                        <tr>
+                        <td key={idx}>{item}</td>
+
+                    <td>{item}</td>
+                    <td>{item}</td>
+                    
+
+
+
+                    <td>
+                        <button>edit</button>
+                        <button>delete</button>
+
+                    </td>
+                    </tr>
+                ))}
+
+
+
+                </tbody>
+            </table>
+
+
+
+
 
             <div className="footer">
                 <footer >
