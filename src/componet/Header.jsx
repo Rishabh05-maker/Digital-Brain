@@ -4,10 +4,10 @@ import React from 'react'
 const Header = () => {
   return (
     <div>
-      <header className="header">
+      <header className="header ">
         <div>
-          <h1> Personal Home</h1>
-          <p>Organize everything in your life in one place.</p>
+          <h1 className='text-2xl font-serif'> Personal Home</h1>
+          <p className='font-serif'>Organize everything in your life in one place.</p>
         </div>
 
 
