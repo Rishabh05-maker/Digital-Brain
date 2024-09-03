@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
 .backgraund {
     background-image: url('https://images.pexels.com/photos/3137068/pexels-photo-3137068.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
     background-position: center;
@@ -12,15 +18,17 @@
 
 
 .footer {
-    padding: 1px;
-    background-color: #282c34;
-    color: white;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
+    padding: 1px;
+    margin-top: 0;
+    background-color: #282c34;
+    color: white;
     text-align: end;
-    margin: 0;
 }
+
 
 .app {
     height: 100vh;
@@ -28,7 +36,7 @@
 
 .header {
     background-image: url('https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-    padding: 20px;
+    padding: 50px;
     position: sticky;
     background-size: cover;
     color: white;
@@ -38,7 +46,7 @@
 }
 .PersonalHeader{
     background-image: url('https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-    padding: 20px;
+    padding: 50px;
     background-size: cover;
     color: white;
     position: static;
@@ -48,7 +56,7 @@
 }
 .productivityHeader{
     background-image: url('https://images.pexels.com/photos/1292241/pexels-photo-1292241.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-    padding: 20px;
+    padding: 50px;
     position: sticky;
     background-repeat: no-repeat;
     background-size: cover;
@@ -58,13 +66,12 @@
 }
 .personalInterests{
     background-image: url('https://images.pexels.com/photos/173294/pexels-photo-173294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-    padding: 20px;
+    padding: 50px;
     position: sticky;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
 
- 
 }
 
 
@@ -167,9 +174,7 @@ span {
 
 }
 
-.home-icon {
-    margin-right: 5px;
-}
+
 
 textarea{
     resize: none;
@@ -193,13 +198,12 @@ textarea{
 
 
 .input-container{
-    width: 30%;
+    width: 40%;
     margin: 5px;
     margin-top: 10px;
     padding: 5px;
-    background-color: #f7f7f7;
     border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+   
 }
 
 .personalButton {

@@ -13,37 +13,37 @@ function Home() {
       <div className='home-heading-container'>
 
         <div className='flex-1'>
-          <h2>  Personal Growth & Well-being  </h2> <hr />
-          <p > <FcIdea className='home-icon' /> Skill Development</p>
-          <p > <FcIdea className='home-icon' /> Diet Plan</p>
-          <p > <FcIdea className='home-icon' /> Workout/Exercise</p>
+          <h2 className='text-2xl font-serif m-2'>  Personal Growth & Well-being  </h2> <hr />
+          <p className='flex font-serif m-2' > <FcIdea/> Skill Development</p>
+          <p className='flex font-serif m-2'> <FcIdea/> Diet Plan</p>
+          <p className='flex font-serif m-2'> <FcIdea/> Workout/Exercise</p>
 
           <Link to={"/personalgrowth"}>
 
-            <button className='home-button'><MdMovieEdit className='home-icon' />View All</button>
+            <button className='home-button flex font-serif items-center'> < MdMovieEdit/> View All</button>
           </Link>
 
         </div>
 
 
         <div className='flex-1'>
-          <h2>Productivity & Planning</h2> <hr />
-          <p > <FcIdea className='home-icon' /> Content Creation</p>
-          <p > <FcIdea className='home-icon' /> Books Reading</p>
-          <p > <FcIdea className='home-icon' /> Reminders</p>
+          <h2 className='text-2xl font-serif m-2'>Productivity & Planning</h2> <hr />
+          <p className='flex font-serif m-2'> <FcIdea/> Content Creation</p>
+          <p className='flex font-serif m-2'> <FcIdea/> Books Reading</p>
+          <p className='flex font-serif m-2'> <FcIdea/> Reminders</p>
           <Link to={"/productivityplanning"}>
-            <button className='home-button'><MdMovieEdit className='home-icon' />View All</button>
+            <button className='home-button flex font-serif items-center'><MdMovieEdit/>View All</button>
           </Link>
         </div>
 
 
 
         <div className='flex-1'>
-          <h2> Personal Interests & Goals</h2> <hr />
-          <p > <FcIdea className='home-icon' /> Wishlist </p>
+          <h2 className='text-2xl font-serif m-2'> Personal Interests & Goals</h2> <hr />
+          <p className='flex font-serif m-2'> <FcIdea/> Wishlist </p>
           <Link to={"/intrestgoals"}>
 
-            <button className='home-button'><MdMovieEdit className='home-icon' />View All</button>
+            <button className='home-button flex font-serif' items-center><MdMovieEdit />View All</button>
           </Link>
 
 
@@ -54,7 +54,7 @@ function Home() {
       </div>
       <div className="footer">
         <footer >
-          <p className='paragragph'>Your professional success and quality of life directly depend on your ability to manage the information around you</p>
+          <p className='paragragph font-serif'>Your professional success and quality of life directly depend on your ability to manage the information around you</p>
         </footer>
       </div>
     </div>
