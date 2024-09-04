@@ -13,7 +13,7 @@ const Route = createBrowserRouter([
         element: <LoginPage/>
     },
     {
-        path: "/ragistration",
+        path: "/registration",
         element: <Ragistration/>
     },
 

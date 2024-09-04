@@ -1,4 +1,7 @@
 import React from 'react'
+import UserProfile from './UserProfile'
+import Logout from './Logout'
+import ScreenMode from './ScreenMode/ScreenMode'
 
 
 const Header = () => {
@@ -8,6 +11,12 @@ const Header = () => {
         <div>
           <h1 className='text-2xl font-serif'> Personal Home</h1>
           <p className='font-serif'>Organize everything in your life in one place.</p>
+
+        </div>
+
+        <div className='items-center'>
+          <ScreenMode/>
+          <Logout/>
         </div>
 
 

@@ -5,11 +5,13 @@ import { Link } from 'react-router-dom';
 import { FcIdea } from "react-icons/fc";
 
 
+
 function Home() {
 
   return (
     <div className="app">
       <Header />
+    
       <div className='home-heading-container'>
 
         <div className='flex-1'>
