@@ -16,9 +16,9 @@ function Home() {
 
         <div className='flex-1'>
           <h2 className='text-2xl font-serif m-2'>  Personal Growth & Well-being  </h2> <hr />
-          <p className='flex font-serif m-2' > <FcIdea/> Skill Development</p>
-          <p className='flex font-serif m-2'> <FcIdea/> Diet Plan</p>
-          <p className='flex font-serif m-2'> <FcIdea/> Workout/Exercise</p>
+          <p className='flex font-serif m-2 text-sm' > <FcIdea/> Skill Development</p>
+          <p className='flex font-serif m-2 text-sm'> <FcIdea/> Diet Plan</p>
+          <p className='flex font-serif m-2 text-sm'> <FcIdea/> Workout/Exercise</p>
 
           <Link to={"/personalgrowth"}>
 
@@ -30,9 +30,9 @@ function Home() {
 
         <div className='flex-1'>
           <h2 className='text-2xl font-serif m-2'>Productivity & Planning</h2> <hr />
-          <p className='flex font-serif m-2'> <FcIdea/> Content Creation</p>
-          <p className='flex font-serif m-2'> <FcIdea/> Books Reading</p>
-          <p className='flex font-serif m-2'> <FcIdea/> Reminders</p>
+          <p className='flex font-serif m-2 text-sm'> <FcIdea/> Content Creation</p>
+          <p className='flex font-serif m-2 text-sm'> <FcIdea/> Books Reading</p>
+          <p className='flex font-serif m-2 text-sm'> <FcIdea/> Reminders</p>
           <Link to={"/productivityplanning"}>
             <button className='home-button flex font-serif items-center'><MdMovieEdit/>View All</button>
           </Link>
@@ -42,7 +42,7 @@ function Home() {
 
         <div className='flex-1'>
           <h2 className='text-2xl font-serif m-2'> Personal Interests & Goals</h2> <hr />
-          <p className='flex font-serif m-2'> <FcIdea/> Wishlist </p>
+          <p className='flex font-serif m-2 text-sm'> <FcIdea/> Wishlist </p>
           <Link to={"/intrestgoals"}>
 
             <button className='home-button flex font-serif' items-center><MdMovieEdit />View All</button>

@@ -10,7 +10,7 @@ const Header = () => {
       <header className="header ">
         <div>
           <h1 className='text-2xl font-serif'> Personal Home</h1>
-          <p className='font-serif'>Organize everything in your life in one place.</p>
+          <p className='font-serif text-sm'>Organize everything in your life in one place.</p>
 
         </div>
 
