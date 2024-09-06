@@ -69,9 +69,16 @@ const PersonalGrowth = () => {
                 </p>
             </header>
 
+            <label htmlFor="">Heading</label>
+            <input className='border' type="text" 
+            placeholder='heading'
+            />
+
             <div className="bg-white p-6 rounded-lg shadow-lg">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+
                     <div className="flex items-center gap-2">
+
                         <label htmlFor="">
                             <BsCardHeading className="text-gray-600" />
                         </label>

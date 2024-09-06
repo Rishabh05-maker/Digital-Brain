@@ -30,7 +30,7 @@ function Home() {
 
         <div className='flex-1'>
           <h2 className='text-2xl font-serif m-2'>Productivity & Planning</h2> <hr />
-          <p className='flex font-serif m-2 text-sm'> <FcIdea/> Content Creation</p>
+          <p className='flex font-serif m-2 text-sm '> <FcIdea/> Content Creation</p>
           <p className='flex font-serif m-2 text-sm'> <FcIdea/> Books Reading</p>
           <p className='flex font-serif m-2 text-sm'> <FcIdea/> Reminders</p>
           <Link to={"/productivityplanning"}>

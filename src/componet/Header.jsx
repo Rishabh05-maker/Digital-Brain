@@ -15,8 +15,9 @@ const Header = () => {
         </div>
 
         <div className='items-center'>
-          <ScreenMode/>
-          <Logout/>
+          <UserProfile/>
+          {/* <ScreenMode/> */}
+          {/* <Logout/> */}
         </div>
 
 

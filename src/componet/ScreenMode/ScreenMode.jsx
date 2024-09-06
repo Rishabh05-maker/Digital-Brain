@@ -6,8 +6,8 @@ function ScreenMode  () {
     var element = document.body;
    element.classList.toggle("dark-mode")
   return (
-    <div>
-      <button onClick={ScreenMode}><SiDarkreader /></button>
+    <div className=''>
+      <button onClick={ScreenMode}> Theme </button>
     </div>
   )
 }

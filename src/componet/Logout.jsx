@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { IoLogOutSharp } from "react-icons/io5";
 
 import {
     Modal,
@@ -45,26 +46,26 @@ function Logout() {
                     onOpen()
                 }}
             >
-                Logout
+                <IoLogOutSharp /> Logout
             </Button>
 
             <Modal isCentered isOpen={isOpen} onClose={onClose}>
                 {overlay}
 
            
-                <ModalContent className='bg-white max-w-[500px] text-center mt-[200px] mx-auto p-2'>
-
-                    <div className='flex justify-between'>
+                <ModalContent className='bg-white max-w-[300px] h-[300px] text-center mt-[200px] items-center mx-auto p-2'>
+                       <img src="https://media1.tenor.com/m/NiBD3Jj07AYAAAAC/monkey-laptop.gif" alt="" />
+                    <div className='flex justify-between p-2 gap-[180px]'>
                     <ModalHeader className='text-red-500'>Alert!</ModalHeader>
                     <ModalCloseButton className='text-red-500' />
                     </div>
 
 
                     <ModalBody >
-                        <Text className='text-blue-400 italic text-mm'>Do you really want to logout ?  </Text>
+                        <Text className='text-blue-400 italic text-sm'> Are You sure you want to logout ?</Text>
                     </ModalBody>
-                    <ModalFooter>
-                       <Button className='border text-black border-1 bg-slate-100 text-sm p-1 '  onClick={onClose}> <Link to={"/login"}>Logout</Link>  </Button>
+                    <ModalFooter >
+                       <Button className='border text-black border-1 bg-slate-100 text-sm p-1 text-center '  onClick={onClose}> <Link to={"/login"}>Logout</Link>  </Button>
                     </ModalFooter>
                    
 
@@ -74,6 +75,8 @@ function Logout() {
         </>
     )
 }
+
+
 
 export default Logout
 
