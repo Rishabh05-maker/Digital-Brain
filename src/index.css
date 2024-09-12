@@ -35,13 +35,8 @@
 
 .header {
     background-image: url('https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-    padding: 50px;
-    position: sticky;
-    background-size: cover;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+   color: white;
+    
 }
 .PersonalHeader{
     background-image: url('https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
@@ -67,6 +62,7 @@
     background-image: url('https://images.pexels.com/photos/173294/pexels-photo-173294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
     padding: 50px;
     position: sticky;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -142,7 +138,7 @@ span {
 }
 
 .home-heading-container {
-    display: flex;
+    
     gap: 10px;
 
 }

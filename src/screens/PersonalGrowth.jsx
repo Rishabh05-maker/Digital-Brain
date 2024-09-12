@@ -15,6 +15,7 @@ const PersonalGrowth = () => {
     const [noteContent, setNoteContent] = useState('')
     const [editIndex, setEditIndex] = useState(null)
 
+
     const saveList = () => {
         if (heading.trim() && categories.trim() && link.trim()) {
             const newItem = { heading, categories, link }
@@ -47,6 +48,8 @@ const PersonalGrowth = () => {
         setList(updatedList)
     };
 
+
+
     const saveNote = () => {
         if (noteTitle.trim() && noteContent.trim()) {
             const newNote = { title: noteTitle, content: noteContent }
@@ -57,7 +60,7 @@ const PersonalGrowth = () => {
     };
 
     return (
-        <div className="p-6 bg-gray-100 min-h-screen">
+        <div className="p-6 bg-gray-100 min-h-screen text-black">
             <header
                 className="PersonalHeader mb-8 bg-cover bg-center p-8 text-white rounded-lg shadow-md"
             >
@@ -69,10 +72,6 @@ const PersonalGrowth = () => {
                 </p>
             </header>
 
-            <label htmlFor="">Heading</label>
-            <input className='border' type="text" 
-            placeholder='heading'
-            />
 
             <div className="bg-white p-6 rounded-lg shadow-lg">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
