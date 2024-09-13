@@ -6,20 +6,24 @@ import Home from '../screens/Home'
 import PersonalGrowth from '../screens/PersonalGrowth'
 import ProductivityPlanning from '../screens/ProductivityPlanning'
 import IntrestGoals from '../screens/IntrestGoals'
+import Auth from '../componet/authentication/Auth'
+import WithoutLogin from '../componet/Authentication/WithoutLogin'
+
+
 
 const Route = createBrowserRouter([
     {
         path:"/login",
-        element: <LoginPage/>
+        element: <WithoutLogin> <LoginPage/> </WithoutLogin> 
     },
     {
         path: "/registration",
-        element: <Ragistration/>
+        element: <WithoutLogin><Ragistration/></WithoutLogin> 
     },
 
     {
         path: "/home",
-        element: <Home/>
+        element: <Auth><Home/></Auth> 
     },
     {
         path: "/personalgrowth",

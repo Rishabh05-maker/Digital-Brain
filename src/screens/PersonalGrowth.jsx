@@ -5,6 +5,9 @@ import { FaLink } from "react-icons/fa6";
 import { SiNotepadplusplus } from "react-icons/si";
 import { div } from 'framer-motion/client';
 
+
+
+
 const PersonalGrowth = () => {
     const [list, setList] = useState([])
     const [notes, setNotes] = useState([])
@@ -17,6 +20,7 @@ const PersonalGrowth = () => {
 
 
     const saveList = () => {
+        
         if (heading.trim() && categories.trim() && link.trim()) {
             const newItem = { heading, categories, link }
 

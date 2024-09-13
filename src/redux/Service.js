@@ -18,15 +18,36 @@ const DigitalBrainApiSlice = createApi({
       }),
      
     }),
+
     login:builder.mutation({
       query:(userData)=>({
         url:'/user/login',
         method:"POST",
         body: userData
       })
+    }),
+
+    category:builder.mutation({
+      query:({categoryName})=>({
+        url:'/category/create',
+        method:"POST",
+        body: {categoryName}
+      })
+      }),
+
+      subcategory:builder.mutation({
+        query:({subcategoryName, categoryId})=>({
+          url:'/subcategory/createsubcategory',
+          method:"POST",
+          body: {subcategoryName, categoryId }
+        })
     })
+
+
   })
 })
 
 export default DigitalBrainApiSlice
-export const {useRegisterMutation, useLoginMutation} = DigitalBrainApiSlice
+
+
+export const {useRegisterMutation, useLoginMutation, useCategoryMutation, useSubcategoryMutation } = DigitalBrainApiSlice
