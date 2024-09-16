@@ -35,13 +35,30 @@ const DigitalBrainApiSlice = createApi({
       })
       }),
 
+      getAllcategory:builder.query({
+        query:(body)=>({
+          url:'/category/getAllcategory',
+          method:"GET",
+          body
+        })
+        }),
+
+
+
       subcategory:builder.mutation({
-        query:({subcategoryName, categoryId})=>({
+        query:(body)=>({
           url:'/subcategory/createsubcategory',
           method:"POST",
-          body: {subcategoryName, categoryId }
+          body
         })
-    })
+    }),
+    getSubcategory:builder.query({
+      query:(body)=>({
+        url:'/subcategory/getAllSubcategory',
+        method:"GET",
+        body
+      })
+  }),
 
 
   })
@@ -50,4 +67,5 @@ const DigitalBrainApiSlice = createApi({
 export default DigitalBrainApiSlice
 
 
-export const {useRegisterMutation, useLoginMutation, useCategoryMutation, useSubcategoryMutation } = DigitalBrainApiSlice
+export const {useRegisterMutation, useLoginMutation, useCategoryMutation,
+   useSubcategoryMutation, useGetAllcategoryQuery, useGetSubcategoryQuery } = DigitalBrainApiSlice

@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { Formik, Form, FieldArray } from 'formik';
-import { useCategoryMutation, useSubcategoryMutation } from '../redux/Service';
+import { useCategoryMutation, useGetAllcategoryQuery } from '../redux/Service';
 
 const AddButton = ({ addCategory }) => {
   const [showForm, setShowForm] = useState(false);
   const [category] = useCategoryMutation();
-  const [subcategory] = useSubcategoryMutation();
 
+ 
   const handleFormSubmit = (values, { resetForm }) => {
-    if (values.categoryName.trim() !== '') {
+    
+
+    if (values.categoryName[0].trim() !== '') {
       const newCategory = {
         category: values.categoryName,
         subcategories: values.subcategories.filter((sub) => sub.trim() !== ''),
@@ -22,12 +24,10 @@ const AddButton = ({ addCategory }) => {
       console.log(res);
     });
 
-    subcategory(values).then((res) => {
-      console.log(res);
-    });
-
     
   };
+
+
 
   return (
     <div className="p-4 mb-5">
@@ -57,33 +57,7 @@ const AddButton = ({ addCategory }) => {
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
-              <h4 className="font-serif text-sm mb-2">Subcategories</h4>
-              <FieldArray name="subcategories">
-                {({ push, remove }) => (
-                  <>
-                    {values.subcategories.map((sub, index) => (
-                      <div key={index}>
-                        <input
-                          type="text"
-                          name={`subcategories[${index}]`}
-                          placeholder={`Subcategory ${index + 1}`}
-                          className="border text-sm p-2 mb-2 w-full rounded"
-                          value={sub}
-                          onChange={handleChange}
-                          onBlur={handleBlur}
-                        />
-                      </div>
-                    ))}
-                    <button
-                      type="button"
-                      onClick={() => push('')}
-                      className="text-blue-500 mt-2 text-sm"
-                    >
-                      Add Subcategory
-                    </button>
-                  </>
-                )}
-              </FieldArray>
+
               <button
                 type="submit"
                 className="block w-full bg-green-500 text-white mt-4 rounded"
